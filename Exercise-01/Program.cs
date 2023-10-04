@@ -10,31 +10,26 @@ namespace Exercise_01
     {
         static void Main(string[] args)
         {
-            char c1 = 'A';
-
-            //Console.WriteLine((char)(64));
-
-
-
-            for (int i = 1; i <= 5; i++)
+            int starter = 1;
+            int n = 5;
+            char ch = 'A';
+            for (int i = 1; i <= n; i++)
             {
-                c1 = 'A';
-                for (int j = 1; j <= i; j++)
+                for (int j = 0; j <= (starter / 2); j++)
                 {
-                    Console.Write(c1);
-                    c1 = (char)(c1 + 1);
+                    Console.Write(ch++);
+                }
+                ch--;
+                ch--;
+
+                for (int k = 0; k < (starter / 2); k++)
+                {
+                    Console.Write(ch--);
                 }
                 Console.WriteLine();
+                ch = 'A';
+                starter = starter + 2;
             }
-
-            for(int i = 1; i <= 5; i++)
-            {
-                //c2 = '';
-                c1 = (char)(c1 - 1);
-                Console.Write(c1);
-
-            }
-            
             Console.ReadLine();
         }
     }
